@@ -45,7 +45,6 @@ class ModelServer:
         return preds
 
     def predict(self, data):
-        print(data.head())
         preds = self._get_predictions(data)
         preds_df = data[[self.id_field_name]].copy()
         preds_df["prediction"] = preds
